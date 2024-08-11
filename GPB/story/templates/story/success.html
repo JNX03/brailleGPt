@@ -1,0 +1,100 @@
+{% load braille_filters %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Story Generated</title>
+    <style>
+        body {
+            background-image: url('https://firebasestorage.googleapis.com/v0/b/brailleproject-8091a.appspot.com/o/Frontend%2FChooselesson%2F%E0%B8%AA%E0%B8%B8%E0%B9%88%E0%B8%A1%E0%B8%84%E0%B8%B3%20%E0%B8%9E%E0%B8%B7%E0%B9%89%E0%B8%99%E0%B8%AB%E0%B8%A5%E0%B8%B1%E0%B8%87.svg?alt=media&token=f476c11e-f624-4b43-af95-cbc59835cb68');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            overflow-x: hidden;
+            display: flex; 
+            justify-content: center; 
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .container {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            width: 100%;
+            max-width: 800px;
+            box-sizing: border-box;
+        }
+
+        h1 {
+            font-family: Arial, sans-serif;
+            color: #ffffff;
+            text-align: center;
+        }
+
+        h2 {
+            font-family: Arial, sans-serif;
+            color: #000000;
+            text-align: center;
+        }
+
+        p {
+            font-family: Arial, sans-serif;
+            color: #000000;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            font-family: Arial, sans-serif;
+            color: #000000;
+            margin-bottom: 20px;
+        }
+
+        strong {
+            color: #004aac;
+        }
+
+        button {
+            background-color: #004aac;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Generated Story</h1>
+        <p><strong>Personality Type:</strong> {{ personality_type }}</p>
+        <p><strong>Story Name:</strong> {{ story_name }}</p>
+        <p><strong>Story:</strong> {{ story }}</p>
+        <!--<p><strong>Story (Braille):</strong> {{ braille_story }}</p>-->
+
+        <!--<h2>All Submitted Stories</h2>
+        <ul>
+            {% for story in stories %}
+            <li>
+                <strong>Type:</strong> {{ story.personality_type }} <br>
+                <strong>Story:</strong> {{ story.story }} <br>
+                <strong>Braille:</strong> {{ story.story|braille }}-->
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>
